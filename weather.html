@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Max Bremner"/>
+    <meta name="description" content="Check current and future forescasts for the area. Webcam footage shows snow conditions on the mountaina and Trails section identifies open and closed trails and lifts"/>
+    <title>Weather | Snowy Mountain Ski Field</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./images/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body class="weatherPage">
+    <header>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <div id="logo">
+                <img id="icon-pic" src="./images/mountain-icon.png" alt="Snowy Mountain icon">
+                <h2 id="logo-h1">Snowy Mountain</h2>
+                <p id="logo-p">Ski Field</p>
+            </div>
+            <label for="nav-toggle" class="nav-toggle-icon"><span>☰</span></label>
+            <ul id="nav-list">
+                <li class="list-element"><a href="index.html">Home</a></li>
+                <li class="list-element"><a href="About.php">About us</a></li>
+                <li class="list-element"><a href="beginner.html">First Time</a></li>
+                <li class="list-element">
+                    <a href="index.html"><img id="logo-pic" src="./images/favicon.svg" alt="Home menu icon"></a>
+                </li>
+                <li class="list-element"><a href="passes.html">Passes</a></li>
+                <li class="list-element"><a href="ski-hire.html">Ski Hire</a></li>
+                <li class="list-element"><a href="weather.html">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+    <picture>
+        <source media="(min-width: 900px)" srcset="./images/resized/landscape.background2-1500.jpg">
+        <source media="(max-width: 899px)" srcset="./images/resized/portrait.background2-600.jpg">
+        <img class="header-img" src="./images/resized/landscape.background2-1500.jpg" alt="black and white snowy mountain">
+        <img class="header-img-2" src="./images/resized/portrait.background2-600.jpg" alt="Colourful mountain range at dawn">
+    </picture>
+    
+    <main>
+        <section id="sectionWeather">
+            <div class="weatherDiv">
+                <div class=currentWeather>
+                    <h3 class="temp-header">Today</h3>
+                    <div id="currentIcon"></div>
+                    <p id="currentTemp"></p>
+                    <p id="currentCondition"></p>
+                </div>
+                <div class="forecast">
+                    <div class="day2">
+                        <h3 class="temp-header">Tomorrow</h3>
+                        <div id="day2Icon"></div>
+                        <p id="day2MinTemp"></p>
+                        <p id="day2MaxTemp"></p>
+                        <p id="day2Condition"></p>
+                    </div>
+                    <div class="day3">
+                    <h3 class="temp-header">Next Day</h3>
+                        <div id="day3Icon"></div>
+                        <p id="day3MinTemp"></p>
+                        <p id="day3MaxTemp"></p>
+                        <p id="day3Condition"></p>
+                        </div>
+                </div>  
+            </div>
+        </section>
+        <section class="webcamSection">
+            <div class="webCam">
+                <h2 class="webcam-h2">Live Webcam</h2>
+                <img class="webcam-img" src="./images/webcam-image.jpg" alt="Base Area webcam">
+            </div>
+            <div class="trailList">
+                <h3 class="trail-h3">Trail / Lift Closures</h3>
+                <div class="trails">
+                <div class="trail">
+                    <span class="trailStatus open">Open</span>
+                    <p class="trailName">Towers Tripe Chair</p>
+                </div>
+                <div class="trail">
+                    <span class="trailStatus open">Open</span>
+                    <p class="trailName">Summit Six Chair</p>
+                </div>
+                <div class="trail">
+                    <span class="trailStatus open">Open</span>
+                    <p class="trailName">Now West Express</p>
+                </div>
+                <div class="trail">
+                    <span class="trailStatus open">Open</span>
+                    <p class="trailName">Cafe</p>
+                </div>
+                <div class="trail">
+                    <span class="trailStatus open">Open</span>
+                    <p class="trailName">Car Park</p>
+                </div>
+                <div class="trail">
+                    <span class="trailStatus closed">Closed</span>
+                    <p class="trailName">Elephant</p>
+                </div>
+                <div class="trail">
+                    <span class="trailStatus closed">Closed</span>
+                    <p class="trailName">Bob's Knob</p>
+                </div>
+                <div class="trail">
+                    <span class="trailStatus closed">Closed</span>
+                    <p class="trailName">Monty's Ridge</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <p>© 2022 - Max Bremner</p>
+            <div class="social-links">
+                <a href="https://github.com/maxgraybremner/">
+                    <img class="social-logo" src="images/link-logo/GitHub-Mark-64px.png" alt="github logo">
+                </a>
+                <a href="https://www.linkedin.com/in/max-bremner-957516188/">
+                    <img class="social-logo" src="images/link-logo/LI-In-Bug.png" alt="Linkedin">
+                </a>
+                <a href="https://www.maxgraybremner.com/">
+                    <img class="social-logo" src="images/link-logo/Elegant Minimalist Modern Initials Studio Logo.png" alt="max gray bremner website logo">
+                </a>
+            </div>
+        </div>
+        <ul class="footer-ul">
+            <li class="list-item"><a class="list-a" href="index.html">Home</a></li>
+            <li class="list-item"><a class="list-a" href="About.php">About us</a></li>
+            <li class="list-item"><a class="list-a" href="beginner.html">First Time</a></li>
+            <li class="list-item"><a class="list-a" href="passes.html">Passes</a></li>
+            <li class="list-item"><a class="list-a" href="ski-hire.html">Ski Hire</a></li>
+            <li class="list-item"><a class="list-a" href="weather.html">Weather</a></li>
+            <li class="list-item"><a class="list-a" href="contact-us.php">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

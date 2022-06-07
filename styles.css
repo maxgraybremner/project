@@ -1,0 +1,749 @@
+        * {
+            margin: 0px;
+            font-weight: 500;
+            font-family: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
+        }
+        /*----------------Variables-----------------------*/
+        
+        body {
+            
+            --background-color: rgb(244, 244, 244);
+            background-color: var(--background-color);
+            --nav-load-time: 400ms;
+            --nav-list-time: 300ms;
+            --media-load-time: 300ms;
+            --header-load-time: 300ms;
+            --nav-load-delay: var(--media-load-time);
+            --nav-list-load-delay: calc(var(--media-load-time) + var(--nav-load-time));
+            --header-load-delay: calc(var(--nav-list-load-delay) + var(--nav-list-time));
+        }
+        /*----------------Google Fonts -----------------------*/
+        
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+        /*----------------Navigation-----------------------*/
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            align-items: center;
+            width: 100%;
+            z-index: 10;
+            margin-top: 0px;
+            background-image: linear-gradient( 180deg, rgba(255, 255, 255, 0.9) 35%, transparent);
+            color: black;
+        }
+        
+        .nav {
+            margin-top: -100px;
+        }
+        #logo {
+            position: absolute;
+            left: 100px;
+        }
+        
+        #logo-p {
+            margin-top: 35px;
+            margin-right: 125px;
+            font-size: 14px;
+        }
+        
+        #logo-h1 {
+            position: absolute;
+            margin-top: 10px;
+            margin-right: -35px;
+            font-size: 20px;
+        }
+        
+        #icon-pic {
+            display: flex;
+            position: absolute;
+            top: -20px;
+            right: 175px;
+            height: 100px;
+            width: auto;
+        }
+        
+        #navlist {
+            background-color: transparent;
+            list-style-type: none;
+        }
+        
+        #nav-list li {
+            display: inline-flex;
+            margin-right: 10px;
+        }
+        
+        #nav-list a {
+            flex-direction: column;
+            text-decoration: none;
+            color: black;
+        }
+        /*-----------navigation hover effect---------------*/
+        
+        #nav-list a::after {
+            content: '';
+            display: block;
+            height: 4px;
+            width: 100%;
+            background-color: black;
+            transform: scale(0, 1);
+            transition: transform ease-in-out 250ms;
+        }
+        
+        #nav-list a:hover::after {
+            transform: scale(1, 1);
+        }
+        
+        #logo-pic {
+            height: 35px;
+        }
+        /*------------------responsive nav button------------*/
+        
+        #nav-toggle {
+            z-index: 10;
+            display: none;
+        }
+        
+        .nav-toggle-icon {
+            display: none;
+            cursor: pointer;
+            margin-left: 15px;
+            margin-top: 15px;
+            font-size: 24px;
+        }
+        /*----------------Home Page Image -----------------------*/
+        
+        picture {
+            display: flex;
+            position: absolute;
+            z-index: -1;
+            top: -100px;
+            width: 100%;
+        }
+        .header-img {
+            width: 100%;
+            transform: scaleX(-1);
+        }
+        .header-img-2 {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        /*----------------Home Page -----------------------*/
+        /*--Page Title--*/
+        .header {
+            display: flex;
+            position: relative;
+            width: 50%;
+            padding: 5% 7.5% 5% 5%;
+            margin: 100px 0px 150px 50px;
+            flex-wrap: wrap;
+            z-index: 9;
+            background-color: rgba(0, 0, 0, 0.40);
+            color: white;
+        }
+        .header-h1 {
+            font-size: 94px;
+            text-transform: uppercase;
+            font-family: 'Staatliches', cursive;
+        }
+        
+        /*--information sections--*/
+        .section-2-h2,
+        .section-1-h2 {
+            font-size: 42px;
+        }
+        
+        .section-2-p,
+        .section-1-p {
+            font-size: 20px;
+        }
+        
+        .section-2,
+        .section-1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-height: 50%;
+            justify-content: center;
+            z-index: 9;
+            padding: 50px 0px 50px 0px;
+            margin: 0px auto;
+            background-color: var(--background-color);
+        }
+        .section-2-info,
+        .section-1-info {
+            flex-direction: column;
+            width: 40%;
+            padding: 15px 15px 15px 15px;
+            background-color: rgba(0, 0, 0, 0.788);
+            z-index: 10;
+            color: white;
+            box-shadow: 0px 0px 15px black;
+        }
+        .section-1 {
+            margin-top: 100px;
+        }
+        .section-1-info {
+            margin-left: -75px;
+        } 
+        .section-2-info {
+            margin-right: -75px;
+        }
+        .section-1-pic,
+        .section-2-pic {
+            width: 50%;
+            Height: auto;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px black;
+        }
+        
+        /*----------------About Page-------------------------*/
+        /*--Trail map--*/
+        .trail-map-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 100%;
+            background-color: var(--background-color);
+        }
+        .trail-map {
+            box-shadow: 0px 0px 15px black;
+        }
+        .heading {
+            display: flex;
+            justify-content: center;
+            font-size: 52px;
+            font-family: 'Staatliches', cursive;
+            background-color: var(--background-color);
+            margin-bottom: 20px;
+        }
+        /*--Event Section--*/
+        #events {
+            margin: 25px 0px;
+        }
+        .submit, .submit-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .submit-input {
+            justify-content: space-around;
+            margin-left: 20%;
+        }
+        .event-card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 85%;
+            margin: 25px auto;
+        }
+        .event-pic {
+            border-radius: 5px;
+            max-height: 300px;
+            max-width: 350px;
+        }
+        .event-card {
+            display: flex;
+            justify-content: space-around;
+            flex: 1;
+            border: 2px solid rgb(92, 92, 94);
+            padding: 20px;
+            gap: 10px;
+            max-width: 750px;
+            transition: transform 200ms;
+            box-shadow: 0px 0px 15px black;
+        }
+        .event-card:hover {
+            transform: scale(1.05);
+        }
+        .time-p {
+            min-width: 140px;
+        }
+        .event-info {
+            max-width: 350px;
+            max-height: 250px;
+        }
+        .event-info-p, .event-info-h2 {
+            min-width: 185px;
+        }
+        .event-info-p {
+            font-size: 12px;
+        }
+        .event-date {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            text-align: end;
+        }
+
+        /*----------------ski Hire page-------------------------*/
+        /*--Hire table--*/
+        #table-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 50px 0px;
+            margin: 0px auto;
+            gap: 20px;
+        }
+        #hire-list {
+            display: flex;
+            flex-direction: row;
+            gap: 150px;
+        }
+        #hire-table {
+            display: flex;
+            text-align: center;
+            padding: 15px;
+            border: 4px solid red;
+            border-radius: 4px;
+        }
+        table th, table td {
+            padding: 5px 10px;
+        }
+        #hire-table tr:hover {
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+
+        /*----------------Passes & lessons Page-------------------*/
+        #container-1 {
+            padding-top: 50px;
+        }
+        .card-container {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        .card {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            text-align: center;
+        }
+        .card a {
+            flex-direction: column;
+            text-decoration: none;
+            color: black;
+            transition-duration: 300ms;
+            padding: 15px 10px;
+        }
+        .card a:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px black;
+        }
+        .card-img {
+            width: 250px;
+            height: 200px;
+        }
+        /*--individual pass & lessons page --*/
+        .relative-path {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            padding: 75px 0px 25px 0px;
+            gap: 20px;
+            opacity: 0.6;
+        }
+        .relative-path a{
+            text-decoration: none;
+            color: gray;
+            transition-duration: 400ms;
+        }
+        .relative-path a:hover {
+            color:black;
+        }
+        .relative-path p:nth-child(even) {
+            color: red;
+        }
+        .relative-path p:last-child {
+            font-weight: bold;
+            color: black;
+        }
+        .pass-information{
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            margin: auto;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .information-pic {
+            width: 55%;
+            height: auto;
+            box-shadow: 0px 0px 15px black;
+        }
+        .price {
+            display: flex;
+            align-items: flex-end;
+            font-size: 24px;
+            width: 400px;
+        }
+        /*----------------Weather-----------------------*/
+        /*--weather api section--*/
+        #sectionWeather {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            width: 40%;
+            min-width: 350px;
+            top: 65px;
+            left: 40px;
+            padding:  0px 20px 20px 40px;
+            background-color: rgba(0, 0, 0, 0.80);
+            color: white;
+        }
+        .weatherDiv > *{
+            display: flex;
+        }
+        .currentWeather {
+            flex-direction: column;
+            justify-content: center;
+            transform: scale(1.3);
+        }
+        .weatherDiv {
+            display: flex;
+            gap: 30px;
+        }
+        .forecast {
+            gap: 20px;
+            transform: scale(0.95);
+        }
+        .day2, .day3 {
+            margin-top: 100px;
+        }
+
+        /*--webcam placeholder--*/
+        .webcamSection {
+            display: flex;
+            flex-direction: column;
+            background: var(--background-color);
+            align-items: center;
+            padding: 25px;
+            margin-top: 125px;
+        }
+        .webCam {
+            display: flex;
+            width: 80%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .webcam-h2 {
+            font-size: 48px;
+        }
+        .webcam-img {
+            width: 95%;
+        }
+        /*--trail status--*/
+        .trailList {
+            margin-top: 60px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        .trails {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .trail {
+            display: flex;
+            gap: 5px;
+        }
+        .trailStatus {
+            color: white;
+            font-size: 24px;
+            width: 125px;
+            height: 30px;
+        }
+        .open {
+            background-color: green;
+        }
+        .closed {
+            background-color: red;
+        }
+        .trail-h3 {
+            font-size: 32px;
+        }
+        .trailName {
+            font-size: 20px;
+        }
+
+        /*----------------contact us page-----------------------*/
+        #page {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+        #contact-info {
+            width: 50%;
+            border: none;
+        }
+
+        .input-form {
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+        }
+        .submit-btn {
+            margin: 15px;
+        }
+        .company-details {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+        .contact-title {
+            font-weight: 600;
+            font-size: 36;
+        }
+        .contact-us-img {
+            width: 110%;
+            height: auto;
+        }
+        input {
+            transition: 500ms;
+        }
+        input:focus {
+            box-shadow: 0px 0px 7px red;
+        }
+        /*----------------Footer -----------------------*/
+        
+        footer {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 250px;
+            background-color: rgb(188, 216, 253);
+            color: black;
+        }
+        
+        footer p {
+            margin-left: 5%;
+        }
+        .footer-ul {
+            display: flex;
+            flex-direction: column;
+            margin: auto auto;
+            gap: 10px;
+            list-style-type: none;
+        }
+        .list-a {
+            text-decoration: none;
+            color: black;
+        } 
+        .list-a:hover {
+            text-decoration: underline;
+        }
+        .social-logo {
+            width: 36px;
+            height: auto;
+        }
+        .social {
+            display: flex;
+            flex-direction: column;
+        }
+        .social-links {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        /*----------------Large Screen nav -----------------------*/
+        @media screen and (min-width: 1100px) {
+            .section-1 {
+                margin-top: 35%;
+            }
+        }
+
+        /*----------------Tablet Screen nav -----------------------*/
+        
+        @media screen and (max-width: 900px) {
+            /*--main page tablet--*/
+            .header-img {
+                display: none;
+            }
+            .header-img-2 {
+                display: flex;
+            }
+            .header {
+                text-align: center;
+            }
+            .section-2-p,
+            .section-1-p {
+                font-size: 14px;
+            }
+            /*--weather page tablet--*/
+            #sectionWeather {
+                transform: scale(0.8);
+            }
+            .trailList {
+                transform: scale(0.8);
+            }
+            /*--Ski hire tablet--*/
+            #hire-list {
+                flex-direction: column;
+                gap: 15px;
+            }
+            #hire-table {
+                transform: scale(0.8);
+            }
+            /*--Event section tablet--*/
+            .event-card {
+                flex-direction: column;
+                align-items: center;
+            }
+            /*--Individual pass pages--*/
+            .pass-information{
+                flex-direction: column;
+            }
+            .information-pic {
+                width: 80%;
+                margin: auto;
+            }
+            /*-----------------responsive nav--------------*/
+            #logo {
+                display: inline-flex;
+                justify-content: flex-end;
+                position: absolute;
+                right: 0px;
+            }
+            #icon-pic {
+                position: absolute;
+                margin-right: -10px;
+            }
+            #logo-p {
+                margin-right: 110px
+            }
+            #logo-h1{
+                margin-right: 10px;
+            }
+            nav {
+                justify-content: left;
+                align-items: flex-start;
+                height: 55px;
+                overflow: hidden;
+            }
+            #nav-list li {
+                display: flex;
+            }
+            #nav-list li:first-child {
+                margin-top: 60px;
+            }
+            #nav-list li:not(:first-child) {
+                margin-top: 25px;
+            }
+            .nav-toggle-icon {
+                display: flex;
+            }
+            .nav-toggle:checked~nav {
+                height: 100%;
+            }
+        }
+
+            /*----------------Mobile Screen nav -----------------------*/
+        @media screen and (max-width: 680px) {
+            /*--main page mobile--*/
+            .header {
+                margin: 100px auto 150px auto;
+            }
+            .header-h1{
+                font-size: 54px;
+            }
+            .section-2-info,
+            .section-1-info {
+                width: 80%;
+                margin: 10px auto;
+            }
+            .section-2-pic,
+            .section-1-pic {
+                width: 80%;
+            }
+            
+            /*--weather page mobile--*/
+            .trailList {
+                transform: scale(0.6);
+            }
+            .webcam-img {
+                width: 80%;
+            }
+            #sectionWeather {
+                transform: scale(0.7);
+            }
+            
+        }
+
+            /*----------------Loading Animations -----------------------*/
+        nav {
+            animation: nav-load var(--nav-load-time) ease-in var(--nav-load-delay);
+            animation-fill-mode: forwards;
+            transform: translateY(-100%);
+        }
+        nav a {
+            animation: nav-list-load var(--nav-list-time) ease-in var(--nav-list-load-delay);
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        .header-img,
+        .background-video {
+            animation: media-load var(--media-load-time) ease-in;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        #sectionWeather,
+        .header {
+            animation: header-load var(--header-load-time) ease-in var(--header-load-delay);
+            animation-fill-mode: forwards;
+            transform: scaleY(0);
+        }
+        @keyframes header-load {
+            0% {
+                transform: scale(0, 0.05);
+            }
+            50% {
+                transform: scale(1, 0.05);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+        @keyframes media-load {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes nav-load {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0)
+            }
+        }
+        @keyframes nav-list-load {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        

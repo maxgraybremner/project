@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Max Bremner"/>
+    <meta name="description" content="Please view our products and ski hire availability, where we provide a list of ski hire packages and a pricing table."/>
+    <title>Ski Hire | Snowy Mountain Ski Field</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./images/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+
+<body class="skiHirePage">
+    <header>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav id="nav" class="nav">
+            <div id="logo">
+                <img id="icon-pic" src="./images/mountain-icon.png" alt="Snowy Mountain icon">
+                <h2 id="logo-h1">Snowy Mountain</h2>
+                <p id="logo-p">Ski Field</p>
+            </div>
+            <label for="nav-toggle" class="nav-toggle-icon"><span>☰</span></label>
+            <ul id="nav-list">
+                <li class="list-element"><a href="index.html">Home</a></li>
+                <li class="list-element"><a href="About.php">About us</a></li>
+                <li class="list-element"><a href="beginner.html">First Time</a></li>
+                <li class="list-element">
+                    <a href="index.html"><img id="logo-pic" src="./images/favicon.svg" alt="Home menu icon"></a>
+                </li>
+                <li class="list-element"><a href="passes.html">Passes</a></li>
+                <li class="list-element"><a href="ski-hire.html">Ski Hire</a></li>
+                <li class="list-element"><a href="weather.html">Weather</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <picture>
+        <source media="(min-width: 900px)" srcset="./images/resized/ski-hire-1600.jpg">
+        <source media="(max-width: 899px)" srcset="./images/resized/Portrait.background1-600.jpg">
+        <img class="header-img" src="./images/resized/ski-hire-1600.jpg" alt="A close up picture of a holding rack of multiple pairs of ski's">
+        <img class="header-img-2" src="./images/resized/Portrait.background1-600.jpg" alt="a pair of blue ski goggles hanging from a single ski in the snow">
+    </picture>
+    <main>
+        <div class="header">
+            <h1 class="header-h1">Equipment Hire & Shop</h1>
+        </div>
+        <section class="section-1">
+            <img class="section-1-pic" src="./images/ski-workshop.jpg" alt="Pair of ski's on a workbench surrounded by tools">
+            <div class="section-1-info">
+                <h2 class="section-1-h2">Equipment Hire</h2>
+                <p class="section-1-p">
+                    OH NO! You forgot your gloves at home! No worries, the Snowy Mountain rental hut has you covered. Everything from skis, snowboards, boots, gloves, jackets and more can be hired right here. For all those powder addicts, we offer extra wide powder skis to help you float over the fresh snow. All snowboards are waxed by our staff to ensure your boardslide is extra silky and if you find your boots don't fit quite right, we will replace them as quick as we can to get you back on the chairlift.
+                </p>
+            </div>
+        </section>
+        <section class="section-2">
+            <div class="section-2-info">
+                <h2 class="section-2-h2">Ski Shop</h2>
+                <p class="section-2-p">
+                    They don't make them like they used to! Unfortunately those hand-me-down pants with the hole is side just don't keep the cold out like before. So try on a new pair at the Snow Shop. Here we are more than happy to help you find a new pair of goggles, a
+                    fresh beanie, or a whole new outfit for the season. Our shop assistants can get you ready for the coldest of days.
+                </p>
+            </div>
+            <img class="section-2-pic" src="./images/snow-shop.jpg" alt="A show fill with winter equipment">
+        </section>
+        <section id="table-container">
+            <h2>Ski Hire items and pricing</h2>
+            <div id="hire-list">
+                <div id="hire-items">
+                    <h3>Ski hire includes:</h3>
+                    <ul>
+                        <li>Skis or snowboard</li>
+                        <li>Ski poles</li>
+                        <li>Ski boots</li>
+                        <li>Helmet</li>
+                    </ul>
+                </div>
+                <div id="hire-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Price per day</th>
+                                <th>1 Day</th>
+                                <th>2 Days</th>
+                                <th>3 Days</th>
+                                <th>4+ Days</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adult 18+</td>
+                                <td>$55</td>
+                                <td>$50</td>
+                                <td>$45</td>
+                                <td>$40</td>
+                            </tr>
+                            <tr>
+                                <td>Children (under 18)</td>
+                                <td>$50</td>
+                                <td>$45</td>
+                                <td>$40</td>
+                                <td>$35</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <p>© 2022 - Max Bremner</p>
+            <div class="social-links">
+                <a href="https://github.com/maxgraybremner/">
+                    <img class="social-logo" src="images/link-logo/GitHub-Mark-64px.png" alt="github logo">
+                </a>
+                <a href="https://www.linkedin.com/in/max-bremner-957516188/">
+                    <img class="social-logo" src="images/link-logo/LI-In-Bug.png" alt="Linkedin">
+                </a>
+                <a href="https://www.maxgraybremner.com/">
+                    <img class="social-logo" src="images/link-logo/Elegant Minimalist Modern Initials Studio Logo.png" alt="max gray bremner website logo">
+                </a>
+            </div>
+        </div>
+        <ul class="footer-ul">
+            <li class="list-item"><a class="list-a" href="index.html">Home</a></li>
+            <li class="list-item"><a class="list-a" href="About.php">About us</a></li>
+            <li class="list-item"><a class="list-a" href="beginner.html">First Time</a></li>
+            <li class="list-item"><a class="list-a" href="passes.html">Passes</a></li>
+            <li class="list-item"><a class="list-a" href="ski-hire.html">Ski Hire</a></li>
+            <li class="list-item"><a class="list-a" href="weather.html">Weather</a></li>
+            <li class="list-item"><a class="list-a" href="contact-us.php">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
